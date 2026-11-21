@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Slow smooth spinning gears */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+/* Reverse spin */
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 22s linear infinite;
+}
+
+/* Floating logo animation */
+@keyframes logo-float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-logo-float {
+  animation: logo-float 4s ease-in-out infinite;
+}
+
+/* Slow fade-in */
+@keyframes fade-in-slow {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-slow {
+  animation: fade-in-slow 1.8s ease-out forwards;
+}
+
+/* Slide-up text */
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 1.2s ease-out forwards;
+}
+
+.animate-slide-up-delayed {
+  animation: slide-up 1.6s ease-out forwards;
+}
+
+/* Spark-like particles glow */
+@keyframes sparks {
+  0%, 100% { opacity: 0.06; }
+  50% { opacity: 0.15; }
+}
+
+.animate-pulse-sparks {
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 2px);
+  background-size: 4px 4px;
+  animation: sparks 3s ease-in-out infinite;
+}
+
+/* Fade-in general */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 2.2s ease-in forwards;
+}
+/* Parallax */
+.parallax-layer {
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.layer1 {
+  animation: moveSlow 20s linear infinite;
+}
+.layer2 {
+  animation: moveMid 15s linear infinite;
+}
+.layer3 {
+  animation: moveFast 10s linear infinite;
+}
+
+@keyframes moveSlow {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-20px); }
+}
+
+@keyframes moveMid {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-40px); }
+}
+
+@keyframes moveFast {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-60px); }
+}
+
+/* Gear reverse slow spin */
+.animate-spin-slow-reverse {
+  animation: spinReverse 18s linear infinite;
+}
+@keyframes spinReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Floating sparks */
+@keyframes sparkle {
+  0% { opacity: .2; }
+  50% { opacity: .4; }
+  100% { opacity: .2; }
+}
+.animate-sparkle {
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+/* Title Glow */
+@keyframes titleGlow {
+  0% { text-shadow: 0 0 20px rgba(41,121,255,0.4); }
+  50% { text-shadow: 0 0 40px rgba(255,255,255,0.9); }
+  100% { text-shadow: 0 0 20px rgba(41,121,255,0.4); }
+}
+.animate-title-glow {
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+/* Shine effect */
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shine {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 4s ease-in-out infinite;
+}
+
+/* Smooth fade + slide */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up-delayed2 {
+  animation: slideUp 1.4s ease-out forwards;
+}
+.animate-fade-in-soft {
+  animation: fadeSoft 1.8s ease-out forwards;
+}
+@keyframes fadeSoft {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Glow pulse */
+@keyframes titleGlow {
+  0% { filter: drop-shadow(0 0 20px rgba(41,121,255,0.4)); }
+  50% { filter: drop-shadow(0 0 35px rgba(255,255,255,0.8)); }
+  100% { filter: drop-shadow(0 0 20px rgba(41,121,255,0.4)); }
+}
+.animate-title-glow {
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+/* Halo breathing */
+@keyframes haloPulse {
+  0% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.15); }
+  100% { opacity: 0.25; transform: scale(1); }
+}
+.animate-halo {
+  animation: haloPulse 5s ease-in-out infinite;
+}
+
+/* Word entrance pop */
+@keyframes wordPop {
+  0% { opacity: 0; transform: scale(0.85) translateY(40px); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.animate-word-pop {
+  animation: wordPop 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Scanning light sweep */
+@keyframes scanLight {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+.animate-scan {
+  animation: scanLight 3.8s ease-in-out infinite;
+}
+
+/* Micro particle sparkles */
+@keyframes particlesFloat {
+  0% { opacity: 0.15; transform: translateY(10px); }
+  50% { opacity: 0.4; transform: translateY(-10px); }
+  100% { opacity: 0.15; transform: translateY(10px); }
+}
+.animate-particles {
+  background-image: radial-gradient(circle, #ffffff40 1px, transparent 1px),
+                    radial-gradient(circle, #ffffff40 1px, transparent 1px);
+  background-size: 12px 12px, 18px 18px;
+  background-position: 0 0, 20px 20px;
+  animation: particlesFloat 4s linear infinite;
+}
+/* Gentle rise */
+@keyframes metalRiseSmall {
+  0% { opacity: 0; transform: translateY(20px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-metal-rise-small {
+  animation: metalRiseSmall 0.9s ease-out forwards;
+}
+
+/* Slow shine */
+@keyframes metalShineSlow {
+  0% { background-position: -150% 0; }
+  100% { background-position: 150% 0; }
+}
+.animate-metal-shine-slow {
+  animation: metalShineSlow 6s ease-in-out infinite;
+}
+
+/* Very soft bolt rotation */
+@keyframes boltRotateSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-bolt-rotate-slow {
+  animation: boltRotateSlow 12s linear infinite;
+}
